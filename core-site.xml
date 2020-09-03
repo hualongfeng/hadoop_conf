@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://spark3:9000</value>
+    </property>
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>file:/root/workspace/hadoop/tmp</value>
+    </property>
+
+    <property>
+        <name>fs.s3a.access.key</name>
+        <value>intel2020</value>
+        <description>AWS access key ID. Omit for Role-based authentication.</description>
+    </property>
+
+    <property>
+        <name>fs.s3a.secret.key</name>
+        <value>intel2020</value>
+        <description>AWS secret key</description>
+    </property>
+
+    <property>
+        <name>fs.s3a.endpoint</name>
+        <value>10.239.241.160:9000</value>
+        <description>AWS S3 endpoint to connect to. An up-to-date list is
+           provided in the AWS Documentation: regions and endpoints. Without this
+           property, the standard region (s3.amazonaws.com) is assumed.
+        </description>
+    </property>
+
+    <property>
+        <name>fs.s3a.connection.ssl.enabled</name>
+        <value>false</value>
+        <description>Enables or disables SSL connections to S3.</description>
+    </property>
+
+    <property>
+	<name>fs.s3a.connection.maximum</name>
+	<value>30</value>
+	<description>Controls the maximum number of simultaneous connections to S3.</description>
+    </property>
+</configuration>
