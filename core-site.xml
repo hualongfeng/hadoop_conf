@@ -23,7 +23,7 @@
     </property>
     <property>
         <name>hadoop.tmp.dir</name>
-        <value>file:/root/workspace/hadoop/tmp</value>
+	<value>file:/root/workspace/hadoop/dfs/tmp</value>
     </property>
 
     <property>
@@ -55,7 +55,107 @@
 
     <property>
 	<name>fs.s3a.connection.maximum</name>
-	<value>30</value>
+	<value>1024</value>
 	<description>Controls the maximum number of simultaneous connections to S3.</description>
     </property>
+    <property>
+	<name>fs.s3a.path.style.access</name>
+	<value>true</value>
+    </property>
+    <property>
+	<name>fs.s3a.block.size</name>
+	<value>512M</value>
+    </property>
+    <property>
+	<name>fs.s3a.committer.magic.enabled</name>
+	<value>false</value>
+    </property>
+    <property>
+	<name>fs.s3a.committer.name</name>
+	<value>directory</value>
+    </property>
+    <property>
+	<name>fs.s3a.buffer.dir</name>
+	<value>${hadoop.tmp.dir}/s3a</value>
+    </property>
+    <property>
+	<name>fs.s3a.committer.staging.abort.pending.uploads</name>
+	<value>true</value>
+    </property>
+    <property>
+	<name>fs.s3a.committer.staging.conflict-mode</name>
+	<value>append</value>
+    </property>
+    <property>
+	<name>fs.s3a.committer.staging.tmp.path</name>
+	<value>/tmp/staging</value>
+    </property>
+    <property>
+	<name>fs.s3a.committer.staging.unique-filenames</name>
+	<value>true</value>
+    </property>
+    <property>
+	<name>fs.s3a.committer.threads</name>
+	<value>256</value>
+	<description>number of threads writing to S3.</description>
+    </property>
+    <property>
+	<name>fs.s3a.connection.establish.timeout</name>
+	<value>5000</value>
+    </property>
+    <property>
+	<name>fs.s3a.connection.timeout</name>
+	<value>200000</value>
+    </property>
+    <property>
+	<name>fs.s3a.fast.upload.active.blocks</name>
+	<value>256</value>
+	<description>number of parallel uploads.</description>
+    </property>
+    <property>
+	<name>fs.s3a.fast.upload.buffer</name>
+	<value>disk</value>
+	<description>use disk as the buffer for uploads.</description>
+    </property>
+    <property>
+	<name>fs.s3a.fast.upload</name>
+	<value>true</value>
+	<description>turn on fast upload mode.</description>
+    </property>
+    <property>
+	<name>fs.s3a.impl</name>
+	<value>org.apache.hadoop.fs.s3a.S3AFileSystem</value>
+    </property>
+    <property>
+	<name>fs.s3a.max.total.tasks</name>
+	<value>512</value>
+	<description>maximum number of parallel tasks.</description>
+    </property>
+    <property>
+	<name>fs.s3a.multipart.size</name>
+	<value>512M</value>
+	<description>size of each multipart chunk.</description>
+    </property>
+    <property>
+	<name>fs.s3a.multipart.threshold</name>
+	<value>512M</value>
+	<description>size before using multipart uploads.</description>
+    </property>
+    <property>
+	<name>fs.s3a.socket.recv.buffer</name>
+	<value>65536</value>
+	<description>read socket buffer hint.</description>
+    </property>
+    <property>
+	<name>fs.s3a.socket.send.buffer</name>
+	<value>65536</value>
+	<description>write socket buffer hint.</description>
+    </property>
+    <property>
+	<name>fs.s3a.threads.max</name>
+	<value>512</value>
+	<description>maximum number of thread for S3A.</description>
+    </property>
+
+
 </configuration>
