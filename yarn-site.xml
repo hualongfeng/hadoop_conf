@@ -25,27 +25,27 @@
     </property>
     <property>
         <name>yarn.resourcemanager.address</name>
-        <value>192.168.251.13:8032</value>
+        <value>10.239.241.177:8032</value>
     </property>
     <property>
         <name>yarn.resourcemanager.scheduler.address</name>
-        <value>192.168.251.13:8030</value>
+	<value>10.239.241.177:8030</value>
     </property>
     <property>
         <name>yarn.resourcemanager.resource-tracker.address</name>
-        <value>192.168.251.13:8035</value>
+        <value>10.239.241.177:8035</value>
     </property>
     <property>
         <name>yarn.resourcemanager.admin.address</name>
-        <value>192.168.251.13:8033</value>
+        <value>10.239.241.177:8033</value>
     </property>
     <property>
         <name>yarn.resourcemanager.webapp.address</name>
-        <value>192.168.251.13:8088</value>
+        <value>10.239.241.177:8088</value>
     </property>
     <property>
         <name>yarn.scheduler.minimum-allocation-mb</name>
-        <value>21504</value>
+        <value>63488</value>
     </property>
     <property>
         <name>yarn.scheduler.minimum-allocation-vcores</name>
@@ -53,12 +53,12 @@
     </property> 
     <property>
         <name>yarn.scheduler.maximum-allocation-mb</name>
-        <value>64512</value>
+        <value>190464</value>
     </property>
-       <property>
+    <property>
         <name>yarn.scheduler.maximum-allocation-vcores</name>
-        <value>21</value>
- </property>  
+        <value>112</value>
+    </property>  
     <property>
         <name>yarn.scheduler.increment-allocation-mb</name>
         <value>1024</value>
@@ -69,15 +69,15 @@
     </property> 
     <property>
         <name>yarn.nodemanager.resource.memory-mb</name>
-        <value>64512</value>
+        <value>190464</value>
     </property>
     <property>
          <name>yarn.app.mapreduce.am.resource.mb</name>
-         <value>21504</value>
+         <value>63488</value>
     </property>
     <property>
          <name>yarn.app.mapreduce.am.command-opts</name>
-         <value>-Xmx16384m</value>
+         <value>-Xmx50176m</value>
     </property>
 
 </configuration>

@@ -19,11 +19,11 @@
 <configuration>
     <property>
         <name>fs.defaultFS</name>
-        <value>hdfs://spark3:9000</value>
+        <value>hdfs://ceph-client2:9000</value>
     </property>
     <property>
         <name>hadoop.tmp.dir</name>
-	<value>file:/root/workspace/hadoop/dfs/tmp</value>
+	<value>file:/mnt/workspace/hadoop/dfs/tmp</value>
     </property>
 
     <property>

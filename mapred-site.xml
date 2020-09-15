@@ -23,35 +23,44 @@
 	</property>
 	<property>
 	    <name>yarn.app.mapreduce.am.env</name>
-	    <value>HADOOP_MAPRED_HOME=/root/workspace/hadoop</value>
+	    <value>HADOOP_MAPRED_HOME=/mnt/workspace/hadoop</value>
 	</property>
 	<property>
 	    <name>mapreduce.map.env</name>
-	    <value>HADOOP_MAPRED_HOME=/root/workspace/hadoop</value>
+	    <value>HADOOP_MAPRED_HOME=/mnt/workspace/hadoop</value>
 	</property>
 	<property>
 	    <name>mapreduce.reduce.env</name>
-	    <value>HADOOP_MAPRED_HOME=/root/workspace/hadoop</value>
+	    <value>HADOOP_MAPRED_HOME=/mnt/workspace/hadoop</value>
 	</property>
 	<property>
 	    <name>mapreduce.map.memory.mb</name>
-	    <value>21504</value>
+	    <value>63488</value>
 	</property>
 	<property>
 	    <name>mapreduce.map.java.opts</name>
-	    <value>-Xmx16384m</value>
+	    <value>-Xmx50176m</value>
 	</property>
 	<property>
 	    <name>mapreduce.reduce.memory.mb</name>
-	    <value>21504</value>
+	    <value>63488</value>
 	</property>
 	<property>
 	    <name>mapreduce.reduce.java.opts</name>
-	    <value>-Xmx16384m</value>
+	    <value>-Xmx50176m</value>
 	</property>
 	<property>
 	    <name>mapreduce.task.io.sort.mb</name>
 	    <value>1792</value>
 	</property>
-
+	<property>
+	    <name>mapreduce.job.reuse.jvm.num.tasks</name>
+	    <value>15</value>
+	    <description>resue upto 15 JVMs</description>
+	</property>
+	<property>
+	    <name>mapreduce.reduce.maxattempts</name>
+	    <value>1</value>
+	    <description>do not retry on failure</description>
+	</property>
 </configuration>

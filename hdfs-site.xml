@@ -19,15 +19,15 @@
 <configuration>
     <property>
         <name>dfs.namenode.secondary.http-address</name>
-        <value>spark3:9001</value>
+        <value>ceph-client4:9001</value>
     </property>
     <property>
         <name>dfs.namenode.name.dir</name>
-        <value>file:/root/workspace/hadoop/dfs/name</value>
+        <value>file:/mnt/workspace/hadoop/dfs/name</value>
     </property>
     <property>
         <name>dfs.datanode.data.dir</name>
-        <value>file:/root/workspace/hadoop/dfs/data</value>
+        <value>file:/mnt/workspace/hadoop/dfs/data</value>
     </property>
     <property>
         <name>dfs.replication</name>
